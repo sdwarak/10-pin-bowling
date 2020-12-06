@@ -67,7 +67,7 @@ class Board
         show << df.join(' ')
         show << ','
       end
-      show
+      show.chop
     end
 
     def roll(pins)
