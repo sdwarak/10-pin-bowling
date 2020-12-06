@@ -143,7 +143,6 @@ end
 def convert_rolls_to_points(rolls)
   points = []
   rolls.each_with_index do |p,idx|
-      
     if p == "X"
       points[idx] = 10
     elsif p == "/"
