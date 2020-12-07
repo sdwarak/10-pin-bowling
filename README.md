@@ -19,3 +19,4 @@ The game can be split into following events.
 |Spare|When all 10 pins are shot in the second attempt.|
 |Awared bonuses|Bonuses are awarded when a strike or spare event takes place.|
 |Display|Display to show the points are counted.|
+|Game over|The game is complete.|
