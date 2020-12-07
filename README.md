@@ -13,4 +13,9 @@ The game can be split into following events.
 
 |Event Name|Description|
 |--------|--------|
-|shot|The exact time at which pins are counted.|
+|Shot|The exact time at which pins are counted.|
+|Frame complete|The frame is complete when the remaining pins are zero or when both shot are played.|
+|Strike|When 10 pins are shot in the first attempt.|
+|Spare|When all 10 pins are shot in the second attempt.|
+|Awared bonuses|Bonuses are awarded when a strike or spare event takes place.|
+|Display|Display to show the points are counted.|
