@@ -140,7 +140,7 @@ class Board
 
 end
 
-def convert_rolls_to_points(rolls)
+def rolls_to_points(rolls)
   points = []
   rolls.each_with_index do |p,idx|
     if p == "X"
@@ -166,10 +166,10 @@ end
 
 def bowling_score(frames)
   rolls = frames_to_rolls(frames)
-  rolls = convert_rolls_to_points(rolls)
+  points = rolls_to_points(rolls)
   bowling = Board.new()
-  rolls.each do |r|
-    bowling.roll(r)
+  points.each do |p|
+    bowling.roll(p)
   end
   puts bowling.display
   return bowling.score
