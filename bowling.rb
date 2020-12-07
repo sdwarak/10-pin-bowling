@@ -180,9 +180,12 @@ game1 = 'X X X X X X X X X XXX'
 game2 = '11 11 11 11 11 11 11 11 11 11'
 game3 = '2/ 17 45 36 X 45 1/ 72 27 33'
 game4 = '36 17 8/ 44 54 62 23 43 9- 3/4'
+game5 = '1- 1- 1- 1- 1- 1- 1- 1- 1- 1-'
 
 
 puts bowling_score(game1)
 puts bowling_score(game2)
 puts bowling_score(game3)
 puts bowling_score(game4)
+puts bowling_score(game5)
+
