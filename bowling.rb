@@ -34,15 +34,15 @@ class Frame
     end
 
     def award_bonuses
-      if strike?
-        @bonus = 2
+      @bonus = if strike?
+        2
       elsif spare?
-        @bonus = 1
+        1
       elsif @first_shot && @second_shot
-        @bonus = 0
+        0
       else
-        @bonus = nil
-      end
+        nil
+               end
     end
 
 end
@@ -105,15 +105,15 @@ class Board
     def fill_display(current_frame, pins)
       cf_num = current_frame.num-1
       @display_per_frame[cf_num] = [] if @display_per_frame[cf_num].nil?
-      if current_frame.strike?
-        @display_per_frame[cf_num] << 'X'
+      @display_per_frame[cf_num] << if current_frame.strike?
+        'X'
       elsif current_frame.spare?  
-        @display_per_frame[cf_num] << '/'
+        '/'
       elsif pins == 0
-        @display_per_frame[cf_num] << '-'
+        '-'
       else
-        @display_per_frame[cf_num] << pins
-      end
+        pins
+                                    end
     end
 
     def calculate_points(current_frame,pins)
@@ -143,15 +143,15 @@ end
 def rolls_to_points(rolls)
   points = []
   rolls.each_with_index do |p,idx|
-    if p == "X"
-      points[idx] = 10
+    points[idx] = if p == "X"
+      10
     elsif p == "/"
-      points[idx] = 10 - points[idx-1]
+      10 - points[idx-1]
     elsif p == '-'
-      points[idx] = 0
+      0
     else
-      points[idx] = p.to_i
-    end
+      p.to_i
+                  end
   end
   points
 end
